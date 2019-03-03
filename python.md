@@ -3,7 +3,7 @@ Create a for loop that iterates over a list of string values with at least 10 it
 some specific values (at least two, but not all).
 
 **Solution**:  
-``` 
+```  
 cards_released_today = ['1089_003', '27_089', '27_013', '13_044', '1089_002', '20_064', '1089_004', 
 			'1089_005', '27_016', '27_011']
 
@@ -11,7 +11,8 @@ for x in cards_released_today:
     if '27_' in x:
         continue
     else:
-        print(x)" ```
+        print(x)"  
+```
 
 
 **Task 2**:  
@@ -19,7 +20,8 @@ Use "while" statement to print the numbers starting from 1 till 256. If current 
 statement (i. e. values 128 - 256 should not be printed).
 
 **Solution**:  
-``` 
+```  
+
 x = 1
 
 while x < 256:
@@ -27,7 +29,8 @@ while x < 256:
         break
 
     print(x)
-    x += 1 ```
+    x += 1  
+```
 
 
 **Task 3**:  
@@ -36,7 +39,7 @@ the next line. In case user input has "not " at the beginning, no need to add an
 When "exit" is printed, exit the program.
 
 **Solution**:  
-``` 
+```  
 while True:
     user_input = input('Please say something: ')
     if 'not ' in user_input:
@@ -44,7 +47,8 @@ while True:
     elif 'exit' in user_input:
         break
     else:
-        print('not ' + user_input)```
+        print('not ' + user_input)  
+```
 
 
 **Task 4**: 
@@ -52,14 +56,15 @@ Create a function that gets two integer values and prints "true" in case both nu
 "false" otherwise. For example, 7 and 17 should result in "true", 6 and 17 - false.
 
 **Solution**:  
-```
+```  
 def get_numbers(num, num2):
     num = int(input('Enter the first number: '))
     num2 = int(input('Enter the second number: '))
 
     print((num2 % 10) == (num % 10))
 
-get_numbers()```
+get_numbers()  
+```
 
 
 **Task 5**: 
@@ -67,12 +72,13 @@ Create functions that calculate area of a circle and perimeter of a rectangle. I
 both in file "task5". Then print each function by calling them with some parameters in "task5".
 
 **Solution**:  
-```
+```  
 import func_circarea as calc_circle_area
 import func_rectperimeter as calc_rectangle_perimeter
 
 print(calc_circle_area.circle_area(5))
-print(calc_rectangle_perimeter.rectper(5, 9))```
+print(calc_rectangle_perimeter.rectper(5, 9))  
+```
 
 
 
@@ -82,7 +88,7 @@ https://us.123rf.com/450wm/extracoin/extracoin1708/extracoin170800030/84812574-m
 In case program is executed multiple times append new multiplication table to the file content, do not override it.
 
 **Solution**:  
-```
+```  
 with open('multitable.txt', 'a') as text:
     for i in range(1, 11):
         for j in range(1, 6):
@@ -96,7 +102,8 @@ with open('multitable.txt', 'a') as text:
             text.write(output)
         text.write('\n')
     text.write('\n\n')
-    text.close()```
+    text.close()  
+```
 
 
 
@@ -105,7 +112,7 @@ Read some long text file (for example some book in txt format) and print total c
 that book.
 
 **Solution**:  
-```
+```  
 line_count = 0
 
 with open('harry_potter_and_the_prisoner_of_azkaban.txt', 'r') as text:
@@ -115,7 +122,8 @@ with open('harry_potter_and_the_prisoner_of_azkaban.txt', 'r') as text:
         else:
             continue
 
-print(line_count)```
+print(line_count)  
+```
 
 
 **Task 8**:
@@ -124,14 +132,15 @@ Skip each line that contains any of the words "he", "she", "it", "they".
 
 
 **Solution**:  
-```
+```  
 a = ["he", "she", "it", "they"]
 
 with open('task9.txt', 'a') as dst_text:
     with open('harry_potter_and_the_prisoner_of_azkaban.txt', 'r') as src_text:
         for line in src_text:
             if(set(a).intersection(set(line.split()))):
-                print(line)```
+                print(line)  
+```
 
 
 **Task 9**:
@@ -140,7 +149,7 @@ First check if directory task10 exists and if not create it. After that in direc
 Also create file 50_users.txt and add 50 random users there in a format we used during practical task.
 
 **Solution**:  
-```
+```  
 import uuid
 import os
 
@@ -185,4 +194,5 @@ with open(r"C:\Users\Flo\PycharmProjects\Homework_3\src\task10\50_installations.
                 "source_client_version": "4.7.0"
             }}
     }}\n""")
-fifty_inst.close()```
+fifty_inst.close()  
+```
