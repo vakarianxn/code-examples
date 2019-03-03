@@ -21,7 +21,6 @@ statement (i. e. values 128 - 256 should not be printed).
 
 **Solution**:  
 ```  
-
 x = 1
 
 while x < 256:
